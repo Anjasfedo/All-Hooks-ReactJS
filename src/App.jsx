@@ -13,11 +13,16 @@ import UseReducer from './components/hookState/UseReducer'
 import UseEffect from './components/hookEffect/useEffect'
 // useLayoutEffect
 import UseLayoutEffect from './components/hookEffect/useLayoutEffect'
+// useInsertionEffect
+import UseInsertionEffect from './components/hookEffect/useInsertionEffect'
+
+// Hook Context
+import UseContext from './components/hookContext/useContext'
 
 function App() {
   return (
     <>
-      <UseLayoutEffect />
+      <UseContext />
     </>
   )
 }
