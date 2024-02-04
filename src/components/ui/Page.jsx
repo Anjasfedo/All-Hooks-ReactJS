@@ -1,6 +1,10 @@
-import React from 'react';
+import { useContext } from 'react';
 
-const Page = ({ isLogin }) => {
+import { LoginContext } from '../hookContext/useContext';
+
+const Page = () => {
+  const [isLogin] = useContext(LoginContext)
+
   return (
     <div className="bg-gray-200 p-4">
       <h1 className="text-2xl font-bold mb-4">

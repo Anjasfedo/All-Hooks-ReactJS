@@ -1,6 +1,10 @@
-import React from "react";
+import { useContext } from "react";
+import { LoginContext } from "../hookContext/useContext";
 
-const NavBar = ({ isLogin, handleLogin }) => {
+const NavBar = () => {
+
+  const [isLogin, handleLogin] = useContext(LoginContext)
+
   return (
     <div className="bg-blue-500 p-4">
       <h1 className="text-2xl font-bold text-white mb-4">

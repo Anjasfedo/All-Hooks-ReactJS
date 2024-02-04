@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import { createContext, useState } from "react";
 import NavBar from "../ui/NavBar";
 import Page from "../ui/Page";
 
-const useContext = () => {
+export const LoginContext = createContext();
+
+const UseContext = () => {
   const [isLogin, setIsLogin] = useState(false);
 
   const handleLogin = () => {
@@ -10,13 +12,15 @@ const useContext = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen">
-      <NavBar isLogin={isLogin} handleLogin={handleLogin} />
-      <div className="container mx-auto p-4">
-        <Page isLogin={isLogin} />
+    <LoginContext.Provider value={[isLogin, handleLogin]}>
+      <div className="bg-gray-100 min-h-screen">
+        <NavBar />
+        <div className="container mx-auto p-4">
+          <Page />
+        </div>
       </div>
-    </div>
+    </LoginContext.Provider>
   );
 };
 
-export default useContext;
+export default UseContext;
