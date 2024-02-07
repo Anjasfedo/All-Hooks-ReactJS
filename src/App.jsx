@@ -21,11 +21,12 @@ import UseContext from './components/hookContext/useContext'
 
 // Hook Ref
 import UseRef from './components/hookRef/UseRef'
+import UseImperativeHandle from './components/hookRef/UseImperativeHandle'
 
 function App() {
   return (
     <>
-      <UseRef />
+      <UseImperativeHandle />
     </>
   )
 }
