@@ -27,10 +27,14 @@ import UseImperativeHandle from "./components/hookRef/UseImperativeHandle";
 import UseMemo from "./components/hookPerformance/UseMemo";
 import UseCallback from "./components/hookPerformance/UseCallback";
 
+// Hook Other
+import UseDebugValue from "./components/hookOther/UseDebugValue";
+import UseId from "./components/hookOther/UseId";
+
 function App() {
   return (
     <>
-      <UseCallback />
+      <UseId />
     </>
   );
 }
